@@ -321,7 +321,15 @@ resourcesPreset: "xlarge"
 ##     cpu: 3
 ##     memory: 1024Mi
 ##
-resources: {}
+resources:
+  requests:
+    cpu: 1
+    memory: 3072Mi
+    ephemeral-storage: 50Mi
+  limits:
+    cpu: 3
+    memory: 6144Mi
+    ephemeral-storage: 2Gi
 ## Configure Pods Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
 ## @param podSecurityContext.enabled Enabled SonarQube&trade; pods' Security Context
